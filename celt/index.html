@@ -1,0 +1,367 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Alexander Golin</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="index.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div class="menu">
+        </div>
+        
+        <div class="container">
+            
+            <div>
+                <h1 id="textBuild"><span id="target1">[who]</span> will be able to <span id="target2">[verb]</span> <span id="target3">[goal]</span> <span id="target4">[condition]</span></h1>
+            </div>
+        
+            
+            <div class="section" id="section1">
+                <div class="sectionContent">
+                    <h2 class="sectionHeader">1. &nbsp; Who Are You Teaching?</h2>
+                    <h3 class="helpText">e.g undergraduates, graduate students, employees</h3>
+                    <div class="textWrap"><input class="textInput" id="who" type="text" value = "The learner"></div>
+                    
+                </div>
+                <div class="nextButton" id="next1">Next</div> 
+            </div>
+            
+            
+            <div class="section" id="section2">
+                <div class="sectionContent" id="bloomSectionContent">
+
+                    <h2 class="sectionHeader">2. &nbsp; Desired Level of Cognitive Activity?</h2>
+
+                    <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">More About Bloom's Taxonomy</h4>
+                          </div>
+                          <div class="modal-body">
+                            <img id="bloomImage" src="blooms.png">
+                            <p>Bloom’s taxonomy is a classification system used to define and distinguish different levels of human cognition—i.e., thinking, learning, and understanding. Educators have typically used Bloom’s taxonomy to inform or guide the development of assessments (tests and other evaluations of student learning), curriculum (units, lessons, projects, and other learning activities), and instructional methods such as questioning strategies.</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    
+                    <div class="bloomWrapper">
+                        
+                        <div id="infoButton" data-toggle="modal" data-target="#myModal"><img src="smallblooms.png" width="100%" height="100%"></div>
+                        
+                        <div class="bloomCategories">
+                            <ul>
+                                <li id="remembering" class="active">Remembering</li>
+                                <li id="understanding">Understanding</li>
+                                <li id="applying">Applying</li>
+                                <li id="analyzing">Analyzing</li>
+                                <li id="evaluating">Evaluating</li>
+                                <li id="creating">Creating</li>
+                                <li id="ownVerb">Own Verb</li>
+                            </ul>
+                            <h3 id="bloomDefinition" class="bloomExample">Demonstrate an ability to recall information previously learned.</h3>
+                        </div>
+                        <div class="bloomOptions active" id="rememberingOptions">
+                            <ul>
+                                <h3 class="bloomExample">Example: List the level of organization from subatomic particles through the biome.</h3>
+                                <li class="bloomVal">Define</li>
+                                <li class="bloomVal">Describe</li>
+                                <li class="bloomVal">State</li>
+                                <li class="bloomVal">Memorize</li>
+                                <li class="bloomVal">Arrange</li>
+                                <li class="bloomVal">Duplicate</li>
+                                <li class="bloomVal">Identify</li>
+                                <li class="bloomVal">Label</li>
+                                <li class="bloomVal">List</li>
+                                <li class="bloomVal">Match</li>
+                                <li class="bloomVal">Name</li>
+                                <li class="bloomVal">Order</li>
+                                <li class="bloomVal">Outline</li>
+                                <li class="bloomVal">Recall</li>
+                                <li class="bloomVal">Recognize</li>
+                                <li class="bloomVal">Relate</li>
+                                <li class="bloomVal">Repeat</li>
+                                <li class="bloomVal">Reproduce</li>
+                                <li class="bloomVal">Select</li>
+                                <li class="bloomVal">Unknown</li>
+                                <li class="bloomVal">Recite</li>
+                                <li class="bloomVal">Quote</li>
+                                <li class="bloomVal">Visualize</li>
+                                <li class="bloomVal">State</li>
+                                <li class="bloomVal">Locate</li>
+                                <li class="bloomVal">Choose</li>
+                                <li class="bloomVal">Find</li>
+                                <li class="bloomVal">Omit</li>
+                                <li class="bloomVal">Show</li>
+                                <li class="bloomVal">Tell</li>
+                            </ul>
+                        </div>
+                        <div class="bloomOptions" id="understandingOptions">
+                            <ul>
+                                <h3 class="bloomExample">Example: Summarize the research on immunizations for lay audiences.</h3>
+                                <li class="bloomVal">Recognize</li>
+                                <li class="bloomVal">Defend</li>
+                                <li class="bloomVal">Discuss</li>
+                                <li class="bloomVal">Indicate</li>
+                                <li class="bloomVal">Explain</li>
+                                <li class="bloomVal">Classify</li>
+                                <li class="bloomVal">Convert</li>
+                                <li class="bloomVal">Describe</li>
+                                <li class="bloomVal">Distinguish</li>
+                                <li class="bloomVal">Estimate</li>
+                                <li class="bloomVal">Exemplify</li>
+                                <li class="bloomVal">Express</li>
+                                <li class="bloomVal">Extend</li>
+                                <li class="bloomVal">Generalize</li>
+                                <li class="bloomVal">Identify</li>
+                                <li class="bloomVal">Infer</li>
+                                <li class="bloomVal">Locate</li>
+                                <li class="bloomVal">Paraphrase</li>
+                                <li class="bloomVal">Predict</li>
+                                <li class="bloomVal">Report</li>
+                                <li class="bloomVal">Restate</li>
+                                <li class="bloomVal">Review</li>
+                                <li class="bloomVal">Rewrite</li>
+                                <li class="bloomVal">Select</li>
+                                <li class="bloomVal">Summarize</li>
+                                <li class="bloomVal">Translate</li>
+                                <li class="bloomVal">Interpret</li>
+                                <li class="bloomVal">Compare</li>
+                                <li class="bloomVal">Differentiate</li>
+                                <li class="bloomVal">Demonstrate</li>
+                            </ul>
+                        </div>
+                        <div class="bloomOptions" id="applyingOptions">
+                            <ul>
+                                <h3 class="bloomExample">Example: Apply the engineering problem solving process to solve basic engineering design and analysis problems.</h3>
+                                <li class="bloomVal">Apply</li>
+                                <li class="bloomVal">Construct</li>
+                                <li class="bloomVal">Interpret</li>
+                                <li class="bloomVal">Produce</li>
+                                <li class="bloomVal">Show</li>
+                                <li class="bloomVal">Solve</li>
+                                <li class="bloomVal">Use</li>
+                                <li class="bloomVal">Write</li>
+                                <li class="bloomVal">Change</li>
+                                <li class="bloomVal">Choose</li>
+                                <li class="bloomVal">Compute</li>
+                                <li class="bloomVal">Demonstrate</li>
+                                <li class="bloomVal">Discover</li>
+                                <li class="bloomVal">Dramatize</li>
+                                <li class="bloomVal">Employ</li>
+                                <li class="bloomVal">Illustrate</li>
+                                <li class="bloomVal">Manipulate</li>
+                                <li class="bloomVal">Modify</li>
+                                <li class="bloomVal">Operate</li>
+                                <li class="bloomVal">Practice</li>
+                                <li class="bloomVal">Predict</li>
+                                <li class="bloomVal">Prepare</li>
+                                <li class="bloomVal">Relate</li>
+                                <li class="bloomVal">Schedule</li>
+                                <li class="bloomVal">Sketch</li>
+                                <li class="bloomVal">Translate</li>
+                                <li class="bloomVal">Model</li>
+                                <li class="bloomVal">Practice</li>
+                                <li class="bloomVal">Operate</li>
+                                <li class="bloomVal">Utilize</li>
+                            </ul>
+                        </div>
+                        <div class="bloomOptions" id="analyzingOptions">
+                            <ul>
+                                <h3 class="bloomExample">Example: Differentiate between constructivism and social learning theory by writing a paper.</h3>
+                                <li class="bloomVal">Break Down</li>
+                                <li class="bloomVal">Point Out</li>
+                                <li class="bloomVal">Illustrate</li>
+                                <li class="bloomVal">Identify</li>
+                                <li class="bloomVal">Analyze</li>
+                                <li class="bloomVal">Appraise</li>
+                                <li class="bloomVal">Calculate</li>
+                                <li class="bloomVal">Categorize</li>
+                                <li class="bloomVal">Compare</li>
+                                <li class="bloomVal">Contrast</li>
+                                <li class="bloomVal">Criticize</li>
+                                <li class="bloomVal">Diagram</li>
+                                <li class="bloomVal">Differentiate</li>
+                                <li class="bloomVal">Discriminate</li>
+                                <li class="bloomVal">Distinguish</li>
+                                <li class="bloomVal">Examine</li>
+                                <li class="bloomVal">Experiment</li>
+                                <li class="bloomVal">Infer</li>
+                                <li class="bloomVal">Model</li>
+                                <li class="bloomVal">Outline</li>
+                                <li class="bloomVal">Question</li>
+                                <li class="bloomVal">Relate</li>
+                                <li class="bloomVal">Select</li>
+                                <li class="bloomVal">Separate</li>
+                                <li class="bloomVal">Subdivide</li>
+                                <li class="bloomVal">Test</li>
+                                <li class="bloomVal">Organize</li>
+                                <li class="bloomVal">Deduce</li>
+                                <li class="bloomVal">Plan</li>
+                                <li class="bloomVal">Inspect</li>
+                            </ul>
+                        </div>
+                        <div class="bloomOptions" id="evaluatingOptions">
+                           <ul>
+                               <h3 class="bloomExample">Example: Appropriately assess patients with common signs and symptoms.</h3>
+                                <li class="bloomVal">Assess</li>
+                                <li class="bloomVal">Value</li>
+                                <li class="bloomVal">Explain</li>
+                                <li class="bloomVal">Appraise</li>
+                                <li class="bloomVal">Argue</li>
+                                <li class="bloomVal">Attach</li>
+                                <li class="bloomVal">Choose</li>
+                                <li class="bloomVal">Compare</li>
+                                <li class="bloomVal">Compute</li>
+                                <li class="bloomVal">Conclude</li>
+                                <li class="bloomVal">Contrast</li>
+                                <li class="bloomVal">Defend</li>
+                                <li class="bloomVal">Describe</li>
+                                <li class="bloomVal">Discriminate</li>
+                                <li class="bloomVal">Estimate</li>
+                                <li class="bloomVal">Evaluate</li>
+                                <li class="bloomVal">Interpret</li>
+                                <li class="bloomVal">Judge</li>
+                                <li class="bloomVal">Justify</li>
+                                <li class="bloomVal">Measure</li>
+                                <li class="bloomVal">Predict</li>
+                                <li class="bloomVal">Rate</li>
+                                <li class="bloomVal">Relate</li>
+                                <li class="bloomVal">Revise</li>
+                                <li class="bloomVal">Score</li>
+                                <li class="bloomVal">Select</li>
+                                <li class="bloomVal">Summarize</li>
+                                <li class="bloomVal">Support</li>
+                                <li class="bloomVal">Critique</li>
+                                <li class="bloomVal">Estimate</li>
+                            </ul>
+                        </div>
+                        <div class="bloomOptions" id="creatingOptions">
+                            <ul>
+                                <h3 class="bloomExample">Example: Create aesthetic structures for the genre in which they are writing.</h3>
+                                <li class="bloomVal">Propose</li>
+                                <li class="bloomVal">Explain</li>
+                                <li class="bloomVal">Create</li>
+                                <li class="bloomVal">Arrange</li>
+                                <li class="bloomVal">Assemble</li>
+                                <li class="bloomVal">Categorize</li>
+                                <li class="bloomVal">Collect</li>
+                                <li class="bloomVal">Combine</li>
+                                <li class="bloomVal">Compose</li>
+                                <li class="bloomVal">Construct</li>
+                                <li class="bloomVal">Design</li>
+                                <li class="bloomVal">Develop</li>
+                                <li class="bloomVal">Devise</li>
+                                <li class="bloomVal">Formulate</li>
+                                <li class="bloomVal">Generate</li>
+                                <li class="bloomVal">Manage</li>
+                                <li class="bloomVal">Organize</li>
+                                <li class="bloomVal">Plan</li>
+                                <li class="bloomVal">Prepare</li>
+                                <li class="bloomVal">Rearrange</li>
+                                <li class="bloomVal">Reconstruct</li>
+                                <li class="bloomVal">Relate</li>
+                                <li class="bloomVal">Reorganize</li>
+                                <li class="bloomVal">Revise</li>
+                                <li class="bloomVal">Rewrite</li>
+                                <li class="bloomVal">Set Up</li>
+                                <li class="bloomVal">Synthesize</li>
+                                <li class="bloomVal">Write</li>
+                                <li class="bloomVal">Invent</li>
+                                <li class="bloomVal">Propose</li>
+                                
+                            </ul>
+                        </div>
+                    
+                        <div class="bloomOptions" id="ownVerbOptions">
+                            <div class="textWrap"><input id="ownVerbInput" class="textInput" type="text"></div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="nextButton" id="next2">Next</div>
+                <div class="prevButton" id="prev2">Previous</div> 
+                
+            </div>
+            
+            <div class="section" id="section3">
+                <div class="sectionContent">
+
+                    <h2 class="sectionHeader">3. &nbsp; What is the Learner's Task?</h2>
+                    <h3 class="helpText">e.g. code in java, write a short story, conduct a lab experiment</h3>
+                    <div class="textWrap"><input class="textInput" id="goal" type="text"></div>
+                
+                </div>
+                <div class="nextButton" id="next3">Next</div>
+                <div class="prevButton" id="prev3">Previous</div> 
+            </div>
+            
+            <div class="section" id="section4">
+                <div class="sectionContent">
+
+                    <h2 class="sectionHeader">4. &nbsp; Under what Conditions?</h2>
+                    <h3 class="helpText">e.g. during a test, in the field, during an interview</h3>
+                    <div class="textWrap"><input class="textInput" id="condition" type="text"></div>
+     
+                </div>
+                <div class="nextButton" id="next4">Next / Skip</div>
+                <div class="prevButton" id="prev4">Previous</div> 
+            </div>
+            
+            <div class="section" id="result">
+                <div class="sectionContent">
+                    <div class="saveButton" id="emailButton">Email</div>
+                    <div class="saveButton" id="copyButton">Copy to Clipboard</div>
+                    <h3 style="margin-top: 20px;">Make changes to steps using the below buttons or start a new objective by clicking <span id="startOver">HERE</span></h3>
+                </div>
+
+            </div>
+            
+            <div class="navigation">
+                <div class="navigationItem navActive" id="navItem1">
+                    1
+                </div>
+                <div class="navigationItem" id="navItem2">
+                    2
+                </div>
+                <div class="navigationItem" id="navItem3">
+                    3
+                </div>
+                <div class="navigationItem" id="navItem4">
+                    4
+                </div>
+                <div class="navigationItem" id="navItem5">
+                    L.O.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

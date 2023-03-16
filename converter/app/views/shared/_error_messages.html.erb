@@ -1,0 +1,11 @@
+<% if @conversion.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      <strong>The form contains <%= pluralize(@conversion.errors.count, "error") %>:</strong>
+    </div>
+    <hr>
+    <% @conversion.errors.full_messages.each do |msg| %>
+      <p><%= msg %></p>
+    <% end %>
+  </div>
+<% end %>

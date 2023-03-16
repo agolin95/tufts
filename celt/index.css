@@ -1,0 +1,285 @@
+body {
+    background-color: #eee;
+    color: #333;
+}
+
+.menu {
+    width: 100%;
+    background-color: #333333;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.section {
+    background-color: #80BBFF;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+    box-shadow: #888 2px 2px 10px;
+    margin-bottom: 25px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 800px;
+    border: #333 solid 2px;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    margin-top: 50px;
+    padding-top: 40px;
+    height: calc(100vh-100px);
+    padding-bottom: 50px;
+
+        /*TODO*/
+    overflow: hidden!important;
+}
+
+.textInput {
+    width: 100%;
+    height: 40px;
+}
+
+.textWrap {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    border: #333 solid 2px;
+    margin-top: 25px;
+    min-width: 200px;
+}
+
+
+.bloomWrapper {
+    background-color: white;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 30px;
+    overflow: scroll;
+    text-align: center!important;
+    max-height: 35vw;
+}
+
+
+.bloomCategories {
+    border-bottom: solid #333 2px;
+    padding-bottom: 10px;
+    text-align: center!important;
+}
+
+.bloomOptions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bloomCategories li{
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 1px;
+    display: inline-block;
+    width: 106px;
+    height: 40px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.bloomCategories li:hover {
+    background-color: #888;
+}
+
+.bloomCategories li.active{
+    background-color: #80BBFF;
+}
+
+.bloomOptions li{
+    width: 90px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.bloomOptions li:hover {
+    background-color: #888;
+}
+
+.bloomOptions li.active{
+    background-color: #80BBFF;
+}
+
+
+
+.nextButton, .prevButton {
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 25px;
+    padding-top: 6px;
+    border-radius: 5px;
+    box-shadow: #888 2px 2px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.nextButton:hover, .prevButton:hover {
+    background-color: #888;   
+}
+
+#section2, #section3, #section4, #result {
+    display: none;
+}
+
+.sectionContent {
+    padding-bottom: 10px;
+}
+
+#bloomSectionContent{
+    padding-top: 0px;
+}
+
+.bloomExample {
+    font-size: 15px;
+    color: #888;
+}
+
+.helpText {
+    color: #777;
+    font-size: 20px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+#textBuild {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+/* LOWER NAVIGATION */
+
+.navigationItem {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: solid #333 3px;
+    border-radius: 60px;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 7px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: #888 2px 2px 6px;
+    cursor: pointer;
+}
+
+
+.navPassed {
+    background-color: #bbb;box-
+}
+
+.navActive {
+    background-color: #80BBFF;
+}
+
+.navPassed:hover {
+    background-color: #888;
+}
+
+
+.navActive:hover {
+    background-color: #80BBFF;
+}
+
+.navText {
+    font-size: 20px;
+    padding-top: 20px!important;
+}
+
+.navigation {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    margin-left: -43px;
+}
+
+.bloomOptions {
+    display: none;
+}
+.bloomOptions.active {
+    display: block;
+}
+
+.bloomVal.active {
+    background-color: #80BBFF;
+}
+
+.saveButton {
+    height: 100px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 27px;
+    font-size: 30px;
+    box-shadow: #888 2px 2px 10px;
+    cursor: pointer;
+}
+
+.saveButton:hover {
+    background-color: #888;
+}
+
+
+
+
+
+.sectionHeader {
+    font-size: 30px;
+    padding-bottom: 10px;
+
+}
+
+
+#infoButton {
+    text-align: center;
+    font-size: 19px;
+    font-family: serif;
+    color: white;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#bloomImage {
+    width: 100%;
+}
+
+#startOver {
+    color: white;
+    cursor: pointer;
+}
+
+#startOver:hover {
+    color: #ddd;
+}

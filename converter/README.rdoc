@@ -1,0 +1,54 @@
+== README
+
+This rails app serves as a web front end for a ruby
+conversion program. This app offers a form for Title, 
+Author, PID, Recording Equipment, Description, and 
+lastly, the file to be converted. 
+
+This app accepts files in TXT and SRT format. It is 
+meant to convert both .srt and Cielo24 (.txt) files to 
+TEI format (.xml files). If the uploaded file is in 
+Cielo24 format, the program first converts it to SRT 
+format before converting the new .srt file to a .xml 
+file in TEI format.
+
+
+Pressing the Download Conversion button will convert 
+the uploaded file and cause the browser to download 
+the new TEI formatted .xml file. The app requires that
+a title and file be specified, and that the file is of
+.txt or .srt format, however it does not check for 
+whether a .txt file is formatted correctly as a cielo24
+transcript, and therefore will deliver erroneous results 
+for an improperly formatted cielo24 .txt file. The app 
+displays error messages if any of the requirements are 
+violated. After pressing the convert button, it will be 
+replaced with a Convert Another File button. Pressing 
+this will reset the form and hide the error messages 
+if there were any.
+
+Every time a conversion is successfully completed, the 
+data filled in by the user is stored in the database. 
+
+Relevant App Files:
+	app/models/conversion.rb
+	app/views/conversions/new.html.erb
+	app/views/shared/_error_messages.html.erb
+	app/controllers/conversions_controller
+	app/assets/stylesheets/custom.css.scss
+
+
+Conversion Scripts:
+	convert_srt_to_tei.rb
+	preprocess_srt.rb
+	process_dir.rb
+	template.rb
+
+Permanent Files Used in Conversion Process:
+	defaultcielo.txt
+	defaultsrt.srt
+	defaultxml.xml
+
+Deployment:
+First, run 'bundle install'
+After bundle install completes, run 'rake db:migrate'

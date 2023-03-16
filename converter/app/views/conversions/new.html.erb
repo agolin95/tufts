@@ -1,0 +1,100 @@
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+
+<script type="text/javascript">
+
+/////////////////////////JQuery///////////////////////////////
+$(document).ready(function(){
+						   
+	//show name of selected file
+	$('#fileinput').change(function() {
+	    var filename = $('input[type=file]').val().split('\\').pop();
+	    $("#filenamefield").val(filename);
+	});
+
+	//check that file size is less than 5MB
+  	$('#fileinput').bind('change', function() {
+    	var size_in_megabytes = this.files[0].size/1024/1024;
+    	if (size_in_megabytes > 5) {
+      		alert('Maximum file size is 5MB. Please choose a smaller file.');
+   		}
+  	});
+});
+
+////////////////////JAVASCRIPT//////////////////////
+
+//function to unhide the convert again button after conversion
+function unhide(clickedButton, itemToShow, itemToHide, itemToHide2){
+	var item = document.getElementById(itemToShow);
+	item.className = 'unhidden';
+	item = document.getElementById(itemToHide);
+	item.className = 'hidden';
+	item = document.getElementById(itemToHide2);
+	item.className = 'hidden';
+}
+
+//function to reset form for another conversion
+function resetform(clickedButton){
+	document.getElementById("titlefield").value = '';
+	document.getElementById("authorfield").value = '';
+	document.getElementById("pidfield").value = '';
+	document.getElementById("recordingfield").value = '';
+	document.getElementById("descriptionfield").value = '';
+	document.getElementById("fileinput").value = '';
+	document.getElementById("filenamefield").value = '';
+	document.getElementById("convertagaindiv").className = 'hidden';
+	document.getElementById("convertbuttondiv").className = 'unhidden';
+	document.getElementById("errormessages").className = 'hidden';
+}
+
+</script>
+<div class="allcontent">
+<h1>SRT to TEI Converter</h1>
+<hr>
+
+<div class="convertercontent">
+<!--form with three text fields, two text areas, one file upload field. -->
+<%= form_for @conversion do |f| %>
+	<div id="errormessages" >
+		<%= render 'shared/error_messages' %>
+	</div>
+	<br>
+	<%= f.label :title %>
+	<%= f.text_field :title, class: 'textinput', id: 'titlefield' %>
+	<br>
+	<%= f.label :author %>
+	<%= f.text_field :author, class: 'textinput', id: 'authorfield' %>
+	<br>
+	<%= f.label :pid, "PID"%>
+	<%= f.text_field :pid, class: 'textinput', id: 'pidfield' %>
+	<br>
+	<%= f.label :recording, "Recording Equipment" %>
+	<%= f.text_area :recording, class: 'textarea', id: 'recordingfield'%>
+	<br>
+	<%= f.label :description %>
+	<%= f.text_area :description, class: 'textarea', id: "descriptionfield" %>
+	<br>
+
+	<!--bootstrap styled file upload field-->
+	<span class="btn btn-default btn-file", id = "fileinputspan"> Select File
+		<%= f.file_field :file, class: 'fileinput', id: 'fileinput' %>
+	</span>
+	<br>
+
+	<!--text field to display file name, compensates for bootstrap styling-->
+	<div class="filenamefielddiv">
+		<input type="text" class= "textinput" id="filenamefield" placeholder="No file selected">
+	</div>
+
+	<!--convert button-->
+	<div class="unhidden", id="convertbuttondiv">
+		<%= f.submit "Download Conversion", id: "convertbutton", class: 'bluebutton', onclick:"unhide(this,'convertagaindiv', 'convertbuttondiv')"%>
+	</div>
+
+	<!--convert anther file button-->
+	<div class="hidden", id="convertagaindiv">
+		<button class="bluebutton" id="convertagainbutton" type="button", onclick = "resetform(this)">Convert Another File</button>
+	</div>
+<% end %>
+
+</div>
+</div>

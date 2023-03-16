@@ -1,0 +1,177 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	text-align: center;
+	font-family: raleway; 
+}
+
+label {
+	display: block;
+	margin-top: 20px
+}
+
+.errors {
+	color: red;
+}
+
+
+#description {
+    margin-bottom: 20px;
+}
+
+.textinput{
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #3C3C3C;
+    width: 100%;
+    text-align: center;
+    max-width: 200px;
+    color: black;
+}
+.textarea{
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+    width: 100%;
+    text-align: center;
+    max-width: 200px;
+    color: black;
+}
+
+.filenamefielddiv{
+    display: block;
+    margin: auto;
+}
+
+#filenamefield{
+    text-align: center;
+    margin-top: 5px;
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+  background-color: #3C3C3C;
+  border-color: #3C3C3C;
+  color: white;
+  width: 50%;
+  max-width: 100px;
+  margin-top: 10px;
+}
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: red;
+  cursor: inherit;
+  display: block;
+}
+
+.bluebutton{
+    border-style: solid;
+    background-color: #3C3C3C;
+    border: 0px;
+    height: 40px;
+    width: 100%;;
+    max-width: 250px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    border-radius: 2px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.unhidden{
+    display: block;
+}
+
+#errormessages{
+  color: red;
+}
+
+#convertagainbutton{
+  font-size: 18px;
+}
+
+.allcontent {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 3px 3px 10px black;
+}
+
+.convertercontent {
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: #3D7BC4;
+  border-radius: 8px;
+  padding: 25px;
+  padding-top: 8px;
+  box-shadow: 2px 2px 10px black;
+  color: white;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+body {
+  background-color: #3C3C3C;
+}
+
+
+h1 {
+  color: #4f91cd;
+}
+
+
+#errormessages {
+  margin-bottom: -25px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.alert.alert-danger {
+  background-color: white;
+  color: red;
+  border: none;
+  margin-bottom: -25px;
+}
+
+#error_explanation p {
+  text-align: center;
+  color: red;
+  background-color: white;
+  padding-left: -100px;
+  border-radius: 5px;
+  margin-top: -10px;
+  padding-bottom: 10px;
+}
+
+
+
+
+
+
+
